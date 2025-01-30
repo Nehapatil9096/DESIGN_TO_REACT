@@ -1,0 +1,238 @@
+.about {
+  padding: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.aboutTitle {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.subTitle {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.mainTitle {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.description {
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.aboutContent {
+  display: flex;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.aboutLeft {
+  display: flex;
+  gap: 20px;
+  flex: 2;
+}
+
+.imgSmall {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.smallImage {
+  width: 200px;
+    height: 320px;
+  object-fit: cover;
+}
+.smallImage1 {
+  width: 200px;
+  height: 160px;
+    object-fit: cover;
+}
+.largeImage {
+  width: 350px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.aboutRight {
+  display: flex;
+  flex-direction: column; /* Stacks the feature boxes vertically */
+  gap: 20px; 
+}
+
+.featureBox {
+  display: flex;
+  align-items: center; /* Centers the image and text vertically */
+  gap: 15px;
+}
+.featureBoxContent {
+  display: flex; 
+  align-items: center; /* Aligns the image and text (lorem) in a row */
+  gap: 15px; /* Space between the image and the text */
+}
+.iconWrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.iconWrapper img {
+  width: 40px; /* Adjust this based on the size of your images */
+  height: 40px; /* Adjust this based on the size of your images */
+}
+.iconWrapper i {
+  color: white;
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  margin: 0; 
+  margin-left: 45px;
+}
+
+.featureText {
+  color: #666;
+  line-height: 1.6;
+  margin: 0; /* Optional: Removes default margin */
+
+}
+
+.button {
+  background: #0066ff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: auto;
+  margin-top: -100px;
+  margin-right: 430px;
+  height: 50px;
+  width: 150px;
+}
+
+.button:hover {
+  background: #0052cc;
+}
+
+.buttonIcon {
+  margin-left: 5px;
+}
+
+@media (max-width: 1024px) {
+  .aboutContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutLeft {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgSmall {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .smallImage,
+  .smallImage1,
+  .largeImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .aboutRight {
+    align-items: center;
+    text-align: center;
+  }
+
+  .featureBox {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .featureBoxContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button {
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 30px;
+  }
+
+  .mainTitle {
+    font-size: 24px;
+  }
+
+  .description {
+    max-width: 100%;
+  }
+
+  .imgSmall {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .smallImage,
+  .smallImage1,
+  .largeImage {
+    width: 90%;
+    height: auto;
+  }
+
+  .featureTitle {
+    font-size: 1.2rem;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 20px;
+  }
+
+  .mainTitle {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .aboutContent {
+    gap: 20px;
+  }
+
+  .featureTitle {
+    font-size: 1rem;
+  }
+
+  .button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
