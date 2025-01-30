@@ -161,7 +161,7 @@ const ContactForm = () => {
               id="message"
               className={errors.message ? 'error' : ''}
               {...register('message', {
-                required: 'Message is required',
+                
                 minLength: { value: 10, message: 'Message must be at least 10 characters' }
               })}
             />
