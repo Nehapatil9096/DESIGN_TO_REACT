@@ -89,7 +89,7 @@ h1 {
 
 .pageContainer {
   padding: 32px;
-  background: #f9fafb;
+  background: #fff;
   min-height: 100vh;
   max-width: 100%;
   font-family: 'Inter', sans-serif;
@@ -503,10 +503,11 @@ tr:last-child td {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
   padding: 16px 0;
   color: #6b7280;
   font-size: 14px;
+  margin-right: 10px;
 }
 
 .rowsSelect {
@@ -609,30 +610,91 @@ tr:last-child td {
   border-color: #6366f1;
   box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.1);
 }
-
-
-
-/* Add responsive styles */
+/* Responsive adjustments */
 @media (max-width: 1024px) {
   .sidebar {
-    width: 240px;
+    width: 220px;
   }
-  
   .mainContent {
-    margin-left: 240px;
+    margin-left: 220px;
   }
 }
 
 @media (max-width: 768px) {
   .sidebar {
-    width: 200px;
+    width: 180px;
   }
-  
   .mainContent {
-    margin-left: 200px;
+    margin-left: 180px;
   }
-  
   .pageContainer {
     padding: 16px;
+  }
+  .headerRight {
+    gap: 12px;
+  }
+  .searchContainer {
+    width: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    min-height: auto;
+  }
+  .mainContent {
+    margin-left: 0;
+  }
+  .pageHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .headerActions {
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .searchContainer {
+    width: 100%;
+  }
+  .filters {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .tableContainer {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+  .pageHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .importexport {
+    align-items: stretch;
+  }
+  .buttonsContainer {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .headerRight {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sortBox {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .pagination {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
   }
 }
