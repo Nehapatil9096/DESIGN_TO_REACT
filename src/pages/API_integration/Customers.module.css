@@ -1,0 +1,525 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 250px;
+  background-color: #1C2536;
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.mainContent {
+  flex: 1;
+  margin-left: 280px;  /* Same as sidebar width */
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.importexport {
+  display: flex;
+  flex-direction: column; /* Stack the heading and buttons vertically */
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 10px; /* Adjust space between buttons */
+  margin-top: 10px; /* Space between heading and buttons */
+}
+
+.iconButton {
+  display: flex;
+  align-items: left;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.iconButton:hover {
+  background-color: #0056b3;
+}
+
+.iconButton svg {
+  margin-right: 5px; /* Adds space between icon and text */
+}
+.page1Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 14px; /* Increase padding to make the header bigger */
+  height: 40px; /* Set a fixed height for the header if needed */
+  margin-top: -30px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.headerLeft img {
+  width: 34px; /* Adjust icon size */
+  height: 34px;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* Spacing between icons */
+}
+
+.headerRight img {
+  width: 34px; /* Adjust icon size */
+  height: 34px;
+}
+
+.headerRight img:hover {
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.pageContainer {
+  padding: 32px;
+  background: #f9fafb;
+  min-height: 100vh;
+  max-width: 100%;
+  font-family: 'Inter', sans-serif;
+
+}
+
+.leftSection {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.leftSection h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+.pageHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+.headerActions {
+  display: flex;
+  gap: 16px;
+  align-items: center; /* Aligns buttons vertically */
+  justify-content: flex-end; /* Aligns the buttons to the right */
+  width: 100%; /* Ensures the container takes full width */
+}
+
+.importBtn,
+.exportBtn {
+  padding: 8px 6px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  color: #374151;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.iconButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: transparent;
+  border: none;
+  color: #6B7280;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.iconButton:hover {
+  color: #374151;
+}
+
+.iconButton svg {
+  width: 16px;
+  height: 16px;
+  stroke: #374151;
+}
+
+.addButton {
+  padding: 8px 16px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.addButton:hover {
+  background: #4F46E5;
+}
+.addBtn {
+  padding: 8px 16px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.pageHeader h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+}
+.header {
+  display: flex;
+  justify-content: space-between; /* Space between left and right */
+  align-items: center; /* Vertically align items */
+  width: 100%; /* Ensure the header takes up the full width */
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center; /* Center the search icon and input */
+  position: relative;
+  width: 300px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 8px 12px 8px 40px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+}
+
+/* .headerRight for aligning items in a row and right-aligned */
+.headerRight {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligns items to the right */
+  gap: 24px; /* Space between items */
+}
+
+/* Styling for individual elements if necessary */
+.languageSelector, .notifications, .profile {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.languageSelector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.flagIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+}
+.notifications {
+  position: relative;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.notificationBadge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #ef4444;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 10px;
+  min-width: 16px;
+  text-align: center;
+}
+
+.profile {
+  cursor: pointer;
+}
+
+.profileAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 8px; /* Optional spacing between profile avatar and other elements */
+
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  color: #374151;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.actionBtn:hover {
+  background: #f3f4f6;
+}
+
+.addBtn {
+  background: #6366f1;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.addBtn:hover {
+  background: #4f46e5;
+}
+
+.allLabel {
+  font-size: 14px;
+  color: #6366f1;
+  margin-bottom: 24px;
+  border-bottom: 2px solid #6366f1;
+  width: fit-content;
+  padding-bottom: 8px;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.searchBox {
+  position: relative;
+  width: 320px;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.searchBox input {
+  width: 100%;
+  padding: 10px 12px 10px 40px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  background: white;
+}
+
+.searchBox input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}
+
+.sortBox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sortBox span {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.sortBox select {
+  padding: 8px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  color: #374151;
+  font-size: 14px;
+  background: white;
+}
+
+.tableContainer {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: auto;  /* Changed from hidden to auto for horizontal scroll if needed */
+  margin-bottom: 16px;
+  width: 100%;
+
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #f9fafb;
+  padding: 12px 24px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+td {
+  padding: 16px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+.customerInfo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #374151;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.name {
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 4px;
+  
+}
+
+.email {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.rowActions {
+  display: flex;
+  gap: 8px;
+}
+
+.iconBtn {
+  padding: 8px;
+  border: none;
+  background: none;
+  color: #6b7280;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.iconBtn:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+  padding: 16px 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.rowsSelect {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rowsSelect select {
+  padding: 4px 8px;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: white;
+}
+
+.loading {
+  padding: 24px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.error {
+  padding: 24px;
+  text-align: center;
+  color: #ef4444;
+}
+
+
+
+
+
+/* Add responsive styles */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 240px;
+  }
+  
+  .mainContent {
+    margin-left: 240px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+  
+  .mainContent {
+    margin-left: 200px;
+  }
+  
+  .pageContainer {
+    padding: 16px;
+  }
+}
