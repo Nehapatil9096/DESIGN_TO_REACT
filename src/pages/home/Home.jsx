@@ -4,6 +4,10 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import axios from 'axios'; // Import axios
 import projectLogo from "/project_logo.png";
+import Search from "/search.png";
+import V from "/V.png";
+
+
 import Rectangle from "/Rectangle 1.png"; // Update the path accordingly
 import Amazon from "/Amazon.png"; // Update the path accordingly
 import Canva from "/Canva.png"; // Update the path accordingly
@@ -21,19 +25,22 @@ const Home = () => {
   
   return (
     <div className={styles.container}>
-      <nav className={styles.navbar}>
-        <div className={styles.navLeft}>
-          <img src={projectLogo} alt="Logo" className={styles.logo} />
-          <Link to="/services">Services</Link>
-          <Link to="/Portfolio">Portfolio</Link>
-          <Link to="/about">About us</Link>
-          <Link to="/Testimonials">Testimonial</Link>
-        </div>
-        <button className={styles.talkButton}>
-        <FaPhone className={styles.phoneIcon} />
-          Talk to us
-        </button>
-      </nav>
+  <nav className={styles.navbar}>
+  <div className={styles.navLeft}>
+    <img src={projectLogo} alt="Logo" className={styles.logo} />
+  </div>
+  <div className={styles.navCenter}>
+    <Link to="/services">Services</Link>
+    <Link to="/Portfolio">Portfolio</Link>
+    <Link to="/about">About us</Link>
+    <Link to="/Testimonials">Testimonial</Link>
+    <img src={Search} alt="Search" className={styles.searchIcon} />
+  </div>
+  <button className={styles.talkButton}>
+    <FaPhone className={styles.phoneIcon} />
+    Talk to us
+  </button>
+</nav>
 
       <main className={styles.heroSection}>
         <div className={styles.contentLeft}>
@@ -48,7 +55,7 @@ const Home = () => {
             unparalleled success.
           </p>
           <button className={styles.bookCallButton}>
-            <FaPhone className={styles.phoneIcon} />
+          <img src={V} alt="Search" className={styles.phoneIcon} />
             Book a call
           </button>
           
