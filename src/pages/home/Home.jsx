@@ -34,6 +34,8 @@ const Home = () => {
     <Link to="/Portfolio">Portfolio</Link>
     <Link to="/about">About us</Link>
     <Link to="/Testimonials">Testimonial</Link>
+    <Link to="/Blog">Blog</Link>
+
     <img src={Search} alt="Search" className={styles.searchIcon} />
   </div>
   <button className={styles.talkButton}>
